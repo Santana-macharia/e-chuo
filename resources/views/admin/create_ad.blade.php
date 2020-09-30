@@ -173,6 +173,15 @@
                             </div>
                         </div>
 
+                        <div class="form-group {{ $errors->has('ad_title')? 'has-error':'' }}">
+                            <label for="ad_title" class="col-sm-4 control-label">School mean: </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="ad_title" value="{{ old('school_mean') }}" name="school_mean" placeholder="Year of Establishment">
+                                {!! $errors->has('yoe')? '<p class="help-block">'.$errors->first('school_mean').'</p>':'' !!}
+                                <p class="text-info"> e.g 2012</p>
+                            </div>
+                        </div>
+
                    
  <!-- 
                         <legend>@lang('app.amenities')</legend>
